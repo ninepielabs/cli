@@ -1,0 +1,32 @@
+{
+  "name": "create-xapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:xuerzong/create-xapp.git",
+  "author": "xuerzong <xuerzong@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "cli"
+  ],
+  "scripts": {
+    "build:cli": "yarn workspace @ninepie/cli build",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.10",
+    "esbuild": "^0.19.5",
+    "fs-extra": "^11.1.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.1",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.2.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write"
+    ]
+  }
+}
